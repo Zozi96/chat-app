@@ -18,9 +18,13 @@ DJANGO_APPS = [
     'django.contrib.staticfiles',
 ]
 
-LOCAL_APPS = []
+LOCAL_APPS = [
+    'apps.chat',
+]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'channels',
+]
 
 INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
 
@@ -112,3 +116,6 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+ASGI_APPLICATION = 'core.routing.application'
